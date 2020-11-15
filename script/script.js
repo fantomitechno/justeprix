@@ -3,7 +3,7 @@ function randomNb(max,min) {
 }
 
 let prix = [randomNb(500,200),randomNb(1000,700),randomNb(1000,700),randomNb(700,300),randomNb(700,300),randomNb(200,50),randomNb(700,300),randomNb(500,200),randomNb(500,200),randomNb(500,200)]
-let essais = 20
+let essais = 40
 let essais_start = essais
 let towin = 0
 let nb1 = randomNb(10,1)
@@ -183,7 +183,7 @@ function tester4() {
 }
 
 function reset() {
-    essais = 20
+    essais = essais_start
     towin = 0
     nb1 = randomNb(10,1)
     nb2 = randomNb(10,1)
