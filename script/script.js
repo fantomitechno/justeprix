@@ -32,7 +32,7 @@ function tester1() {
         document.formulaire1.saisie1.disabled = true
         if (towin == 4) {
             alert('VOUS AVEZ GAGNER')
-            document.getElementById('gl').innerHTML=`Vous avez gagné en ${essais_start-essais}`
+            document.getElementById('gl').innerHTML=`Vous avez gagné en ${essais_start-essais} essaies.`
             document.getElementById('resetbp').innerHTML='<br><INPUT TYPE="button" VALUE="Recommencer" ONCLICK="reset()"></INPUT>'
         }
     } else if (essais > 0) {
@@ -64,7 +64,7 @@ function tester1() {
 
 function tester2() {
     essais--
-    document.getElementById('essaies').innerHTML=`Essaie(s) restant(s) : ${essais}`
+    document.getElementById('essaies').innerHTML=`Essaie(s) restant(s) : ${essais} essaies.`
     if (document.formulaire2.saisie2.value == prix[nb2-1] && essais > 0) {
         document.formulaire2.bp2.disabled = true
         towin++
@@ -104,7 +104,7 @@ function tester2() {
 
 function tester3() {
     essais--
-    document.getElementById('essaies').innerHTML=`Essaie(s) restant(s) : ${essais}`
+    document.getElementById('essaies').innerHTML=`Essaie(s) restant(s) : ${essais} essaies.`
     if (document.formulaire3.saisie3.value == prix[nb3-1] && essais > 0) {
         document.formulaire3.bp3.disabled = true
         towin++
@@ -144,7 +144,7 @@ function tester3() {
 
 function tester4() {
     essais--
-    document.getElementById('essaies').innerHTML=`Essaie(s) restant(s) : ${essais}`
+    document.getElementById('essaies').innerHTML=`Essaie(s) restant(s) : ${essais} essaies.`
     if (document.formulaire4.saisie4.value == prix[nb4-1] && essais > 0) {
         document.formulaire4.bp4.disabled = true
         towin++
@@ -201,6 +201,7 @@ function reset() {
     document.getElementById('reset').innerHTML=`<tbody><tr><td><img src=images/produit${nb1}.jpg></td><td><img src=images/produit${nb2}.jpg></td><td><img src=images/produit${nb3}.jpg></td><td><img src=images/produit${nb4}.jpg></td></tr><tr><td><form name='formulaire1'><input type='text' name='saisie1' size='10'><input type='button' name='bp1' value='CHECK' onclick='tester1()'></form></td><td><form name='formulaire2'><input type='text' name='saisie2' size='10'><input type='button' name='bp2' value='CHECK' onclick='tester2()'></form></td><td><form name='formulaire3'><input type='text' name='saisie3' size='10'><input type='button' name='bp3' value='CHECK' onclick='tester3()'></form></td><td><form name='formulaire4'><input type='text' name='saisie4' size='10'><input type='button' name='bp4' value='CHECK' onclick='tester4()'></form></td></tr></tbody>`
     document.getElementById('resetbp').innerHTML=''
     document.getElementById('gl').innerHTML='Bonne Chance'
+    document.getElementById('essaies').innerHTML=`Essaie(s) restant(s) : ${essais} essaies.` 
 }
 
 
