@@ -5,6 +5,9 @@ img {
 div {
     font-size: 20px;
 }
+span {
+    font-size: 20px;
+}
 table {
     border-collapse:collapse;
     width: 50%;
