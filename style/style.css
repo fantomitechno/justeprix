@@ -1,7 +1,14 @@
-img{
+img {
     width: 300px;
     display: block;
 }
-div{
+div {
     font-size: 20px;
+}
+table {
+    border-collapse:collapse;
+    width: 50%;
+    text-align: center;
+    border: 1px solid black;
+    margin-right: 50%;
 }
