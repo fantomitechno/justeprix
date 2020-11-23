@@ -19,9 +19,17 @@ let nb4 = randomNb(10,1)
 while (nb4 === nb1 || nb4 === nb2 || nb4 === nb3) {
     nb4 = randomNb(10,1)
 }
-
-
-
+function next() {
+    if (towin = 1) document.getElementById('reset').innerHTML=`<tbody><tr><td><img src=images/produit${nb2}.jpg></td></tr><tr><td><form name='formulaire2'><input type='text' name='saisie2' size='10'><input type='button' name='bp2' value='CHECK' onclick='tester2()'></form></td></tr></tbody>`
+    if (towin = 2) document.getElementById('reset').innerHTML=`<tbody><tr><td><img src=images/produit${nb3}.jpg></td></tr><tr><td><form name='formulaire2'><input type='text' name='saisie2' size='10'><input type='button' name='bp2' value='CHECK' onclick='tester2()'></form></td></tr></tbody>`
+    if (towin = 3) document.getElementById('reset').innerHTML=`<tbody><tr><td><img src=images/produit${nb4}.jpg></td></tr><tr><td><form name='formulaire2'><input type='text' name='saisie2' size='10'><input type='button' name='bp2' value='CHECK' onclick='tester2()'></form></td></tr></tbody>`
+}
+function start() {
+    document.getElementById('reset').innerHTML=`<tbody><tr><td><img src=images/produit${nb1}.jpg></td><td><img src=images/produit${nb2}.jpg></td><td><img src=images/produit${nb3}.jpg></td><td><img src=images/produit${nb4}.jpg></td></tr><tr><td><form name='formulaire1'><input type='text' name='saisie1' size='10'><input type='button' name='bp1' value='CHECK' onclick='tester1()'></form></td><td><form name='formulaire2'><input type='text' name='saisie2' size='10'><input type='button' name='bp2' value='CHECK' onclick='tester2()'></form></td><td><form name='formulaire3'><input type='text' name='saisie3' size='10'><input type='button' name='bp3' value='CHECK' onclick='tester3()'></form></td><td><form name='formulaire4'><input type='text' name='saisie4' size='10'><input type='button' name='bp4' value='CHECK' onclick='tester4()'></form></td></tr></tbody>`
+    document.getElementById('resetbp').innerHTML=''
+    document.getElementById('gl').innerHTML='Bonne Chance'
+    document.getElementById('essaies').innerHTML=`Essaie(s) restant(s) : ${essais} essaies.` 
+}
 function tester1() {
     essais--
     document.getElementById('essaies').innerHTML=`Essaie(s) restant(s) : ${essais}`
@@ -198,14 +206,8 @@ function reset() {
     while (nb4 === nb1 || nb4 === nb2 || nb4 === nb3) {
         nb4 = randomNb(10,1)
     }
-    document.getElementById('reset').innerHTML=`<tbody><tr><td><img src=images/produit${nb1}.jpg></td><td><img src=images/produit${nb2}.jpg></td><td><img src=images/produit${nb3}.jpg></td><td><img src=images/produit${nb4}.jpg></td></tr><tr><td><form name='formulaire1'><input type='text' name='saisie1' size='10'><input type='button' name='bp1' value='CHECK' onclick='tester1()'></form></td><td><form name='formulaire2'><input type='text' name='saisie2' size='10'><input type='button' name='bp2' value='CHECK' onclick='tester2()'></form></td><td><form name='formulaire3'><input type='text' name='saisie3' size='10'><input type='button' name='bp3' value='CHECK' onclick='tester3()'></form></td><td><form name='formulaire4'><input type='text' name='saisie4' size='10'><input type='button' name='bp4' value='CHECK' onclick='tester4()'></form></td></tr></tbody>`
+    document.getElementById('reset').innerHTML=``
     document.getElementById('resetbp').innerHTML=''
-    document.getElementById('gl').innerHTML='Bonne Chance'
-    document.getElementById('essaies').innerHTML=`Essaie(s) restant(s) : ${essais} essaies.` 
+    document.getElementById('gl').innerHTML='Commencer :'
+    document.getElementById('essaies').innerHTML=`<input type='button' name='bp' value='START' onclick='start()'>` 
 }
-
-
-
-//console.log(`Num images : ${nb1} , ${nb2} , ${nb3} , ${nb4}`);
-//console.log(`Prix : ${prix[nb1-1]} , ${prix[nb2-1]} , ${prix[nb3-1]} , ${prix[nb4-1]}`)
-document.write(`<h1 id='gl'>Bonne chance</h1><div id='essaies'>Essaie(s) restant(s) : ${essais}</div><br><table id='reset'><tbody><tr><td><img src=images/produit${nb1}.jpg></td><td><img src=images/produit${nb2}.jpg></td><td><img src=images/produit${nb3}.jpg></td><td><img src=images/produit${nb4}.jpg></td></tr><tr><td><form name='formulaire1'><input type='text' name='saisie1' size='10'><input type='button' name='bp1' value='CHECK' onclick='tester1()'></form></td><td><form name='formulaire2'><input type='text' name='saisie2' size='10'><input type='button' name='bp2' value='CHECK' onclick='tester2()'></form></td><td><form name='formulaire3'><input type='text' name='saisie3' size='10'><input type='button' name='bp3' value='CHECK' onclick='tester3()'></form></td><td><form name='formulaire4'><input type='text' name='saisie4' size='10'><input type='button' name='bp4' value='CHECK' onclick='tester4()'></form></td></tr></tbody></table><div id='replay'><div id='resetbp'></div><br><br>GitHub : <a href = 'https://github.com/fantomitechno/justeprix'><img src = 'images/github.png' id = 'photo'></a>`)
