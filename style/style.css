@@ -12,3 +12,7 @@ table {
     border: 1px solid black;
     margin-right: 50%;
 }
+#photo {
+    width: 20px;
+    display: inline;
+}
