@@ -20,9 +20,9 @@ let nb4 = randomNb(10,1)
 while (nb4 === nb1 || nb4 === nb2 || nb4 === nb3) {
     nb4 = randomNb(10,1)
 }
-console.log(`${prix[nb1-1]} / ${prix[nb2-1]} / ${prix[nb3-1]} / ${prix[nb4-1]}`)
+/*console.log(`${prix[nb1-1]} / ${prix[nb2-1]} / ${prix[nb3-1]} / ${prix[nb4-1]}`)
 console.log(`${nb1} / ${nb2} / ${nb3} / ${nb4}`)
-console.log(`${prixMinMax[nb1-1]} / ${prixMinMax[nb2-1]} / ${prixMinMax[nb3-1]} / ${prixMinMax[nb4-1]}`)
+console.log(`${prixMinMax[nb1-1]} / ${prixMinMax[nb2-1]} / ${prixMinMax[nb3-1]} / ${prixMinMax[nb4-1]}`) */
 function next() {
     document.getElementById('info').innerHTML=''
     console.log(towin)
