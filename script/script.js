@@ -131,7 +131,7 @@ function tester4() {
         document.formulaire4.saisie4.disabled = true
         next()
         if (towin == 4) {
-            alert('VOUS AVEZ GAGNER')
+            alert('VOUS AVEZ GAGNÉ')
             document.getElementById('gl').innerHTML=`Vous avez gagné en ${essais_start-essais}`
             document.getElementById('resetbp').innerHTML='<br><INPUT TYPE="button" VALUE="Recommencer" ONCLICK="reset()"></INPUT>'
         }
