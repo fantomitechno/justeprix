@@ -41,6 +41,7 @@ function tester1() {
         document.formulaire1.saisie1.value = 'Trouvé !'
         document.getElementById('info').innerHTML='Trouvé !'
         document.formulaire1.saisie1.disabled = true
+        next() 
         if (towin == 4) {
             alert('VOUS AVEZ GAGNER')
             document.getElementById('gl').innerHTML=`Vous avez gagné en ${essais_start-essais} essaies.`
@@ -56,17 +57,8 @@ function tester1() {
         }
     } else {
         document.formulaire1.bp1.disabled = true
-        document.formulaire2.bp2.disabled = true
-        document.formulaire3.bp3.disabled = true
-        document.formulaire4.bp4.disabled = true
         document.formulaire1.saisie1.disabled = true
-        document.formulaire2.saisie2.disabled = true
-        document.formulaire3.saisie3.disabled = true
-        document.formulaire4.saisie4.disabled = true
         document.formulaire1.saisie1.value = prix[nb1-1]
-        document.formulaire2.saisie2.value = prix[nb2-1]
-        document.formulaire3.saisie3.value = prix[nb3-1]
-        document.formulaire4.saisie4.value = prix[nb4-1]
         alert('Vous avez perdu !')
         document.getElementById('gl').innerHTML=`Vous avez perdu...`
         document.getElementById('resetbp').innerHTML='<br><INPUT TYPE="button" VALUE="Recommencer" ONCLICK="reset()"></INPUT>'
@@ -82,6 +74,7 @@ function tester2() {
         document.formulaire2.saisie2.value = 'Trouvé !'
         document.getElementById('info').innerHTML='Trouvé !'
         document.formulaire2.saisie2.disabled = true
+        next()
         if (towin == 4) {
             alert('VOUS AVEZ GAGNER')
             document.getElementById('gl').innerHTML=`Vous avez gagné en ${essais_start-essais}`
@@ -96,18 +89,9 @@ function tester2() {
             document.formulaire2.saisie2.value = ''
         }
     } else {
-        document.formulaire1.bp1.disabled = true
         document.formulaire2.bp2.disabled = true
-        document.formulaire3.bp3.disabled = true
-        document.formulaire4.bp4.disabled = true
-        document.formulaire1.saisie1.disabled = true
         document.formulaire2.saisie2.disabled = true
-        document.formulaire3.saisie3.disabled = true
-        document.formulaire4.saisie4.disabled = true
-        document.formulaire1.saisie1.value = prix[nb1-1]
         document.formulaire2.saisie2.value = prix[nb2-1]
-        document.formulaire3.saisie3.value = prix[nb3-1]
-        document.formulaire4.saisie4.value = prix[nb4-1]
         alert('Vous avez perdu !')
         document.getElementById('gl').innerHTML=`Vous avez perdu...`
         document.getElementById('resetbp').innerHTML='<br><INPUT TYPE="button" VALUE="Recommencer" ONCLICK="reset()"></INPUT>'
@@ -123,6 +107,7 @@ function tester3() {
         document.formulaire3.saisie3.value = 'Trouvé !'
         document.getElementById('info').innerHTML='Trouvé !'
         document.formulaire3.saisie3.disabled = true
+        next()
         if (towin == 4) {
             alert('VOUS AVEZ GAGNER')
             document.getElementById('gl').innerHTML=`Vous avez gagné en ${essais_start-essais}`
@@ -137,18 +122,9 @@ function tester3() {
             document.formulaire3.saisie2.value = ''
         }
     } else {
-        document.formulaire1.bp1.disabled = true
-        document.formulaire2.bp2.disabled = true
         document.formulaire3.bp3.disabled = true
-        document.formulaire4.bp4.disabled = true
-        document.formulaire1.saisie1.disabled = true
-        document.formulaire2.saisie2.disabled = true
         document.formulaire3.saisie3.disabled = true
-        document.formulaire4.saisie4.disabled = true
-        document.formulaire1.saisie1.value = prix[nb1-1]
-        document.formulaire2.saisie2.value = prix[nb2-1]
         document.formulaire3.saisie3.value = prix[nb3-1]
-        document.formulaire4.saisie4.value = prix[nb4-1]
         alert('Vous avez perdu !')
         document.getElementById('gl').innerHTML=`Vous avez perdu...`
         document.getElementById('resetbp').innerHTML='<br><INPUT TYPE="button" VALUE="Recommencer" ONCLICK="reset()"></INPUT>'
@@ -164,6 +140,7 @@ function tester4() {
         document.formulaire4.saisie4.value = 'Trouvé !'
         document.getElementById('info').innerHTML='Trouvé !'
         document.formulaire4.saisie4.disabled = true
+        next()
         if (towin == 4) {
             alert('VOUS AVEZ GAGNER')
             document.getElementById('gl').innerHTML=`Vous avez gagné en ${essais_start-essais}`
@@ -178,17 +155,8 @@ function tester4() {
             document.formulaire4.saisie4.value = ''
         }
     } else {
-        document.formulaire1.bp1.disabled = true
-        document.formulaire2.bp2.disabled = true
-        document.formulaire3.bp3.disabled = true
         document.formulaire4.bp4.disabled = true
-        document.formulaire1.saisie1.disabled = true
-        document.formulaire2.saisie2.disabled = true
-        document.formulaire3.saisie3.disabled = true
         document.formulaire4.saisie4.disabled = true
-        document.formulaire1.saisie1.value = prix[nb1-1]
-        document.formulaire2.saisie2.value = prix[nb2-1]
-        document.formulaire3.saisie3.value = prix[nb3-1]
         document.formulaire4.saisie4.value = prix[nb4-1]
         alert('Vous avez perdu !')
         document.getElementById('gl').innerHTML=`Vous avez perdu...`
