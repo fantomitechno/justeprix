@@ -21,10 +21,14 @@ while (nb4 === nb1 || nb4 === nb2 || nb4 === nb3) {
     nb4 = randomNb(10,1)
 }
 console.log(`${prix[nb1-1]} / ${prix[nb2-1]} / ${prix[nb3-1]} / ${prix[nb4-1]}`)
+console.log(`${nb1} / ${nb2} / ${nb3} / ${nb4}`)
+console.log(`${prixMinMax[nb1-1]} / ${prixMinMax[nb2-1]} / ${prixMinMax[nb3-1]} / ${prixMinMax[nb4-1]}`)
 function next() {
-    if (towin = 1) document.getElementById('reset').innerHTML=`<tbody><tr><td><img src=images/produit${nb2}.jpg></td><td>Between ${prixMinMax[nb2-1]}</td></tr><tr><td><form name='formulaire2'><input type='text' name='saisie2' size='10'><input type='button' name='bp2' value='CHECK' onclick='tester2()'></form></td><td></td></tr></tbody>`
-    if (towin = 2) document.getElementById('reset').innerHTML=`<tbody><tr><td><img src=images/produit${nb3}.jpg></td><td>Between ${prixMinMax[nb3-1]}</td></tr><tr><td><form name='formulaire3'><input type='text' name='saisie3' size='10'><input type='button' name='bp3' value='CHECK' onclick='tester3()'></form></td><td></td></tr></tbody>`
-    if (towin = 3) document.getElementById('reset').innerHTML=`<tbody><tr><td><img src=images/produit${nb4}.jpg></td><td>Between ${prixMinMax[nb4-1]}</td></tr><tr><td><form name='formulaire4'><input type='text' name='saisie4' size='10'><input type='button' name='bp4' value='CHECK' onclick='tester4()'></form></td><td></td></tr></tbody>`
+    document.getElementById('info').innerHTML=''
+    console.log(towin)
+    if (towin === 1) document.getElementById('reset').innerHTML=`<tbody><tr><td><img src=images/produit${nb2}.jpg></td><td>Between ${prixMinMax[nb2-1]}</td></tr><tr><td><form name='formulaire2'><input type='text' name='saisie2' size='10'><input type='button' name='bp2' value='CHECK' onclick='tester2()'></form></td><td></td></tr></tbody>`
+    if (towin === 2) document.getElementById('reset').innerHTML=`<tbody><tr><td><img src=images/produit${nb3}.jpg></td><td>Between ${prixMinMax[nb3-1]}</td></tr><tr><td><form name='formulaire3'><input type='text' name='saisie3' size='10'><input type='button' name='bp3' value='CHECK' onclick='tester3()'></form></td><td></td></tr></tbody>`
+    if (towin === 3) document.getElementById('reset').innerHTML=`<tbody><tr><td><img src=images/produit${nb4}.jpg></td><td>Between ${prixMinMax[nb4-1]}</td></tr><tr><td><form name='formulaire4'><input type='text' name='saisie4' size='10'><input type='button' name='bp4' value='CHECK' onclick='tester4()'></form></td><td></td></tr></tbody>`
 }
 function start() {
     document.getElementById('reset').innerHTML=`<tbody><tr><td><img src=images/produit${nb1}.jpg></td><td>Between ${prixMinMax[nb1-1]}</td></tr><tr><td><form name='formulaire1'><input type='text' name='saisie1' size='10'><input type='button' name='bp1' value='CHECK' onclick='tester1()'></form></td><td></td></tr></tbody>`
@@ -42,11 +46,6 @@ function tester1() {
         document.getElementById('info').innerHTML='Trouvé !'
         document.formulaire1.saisie1.disabled = true
         next() 
-        if (towin == 4) {
-            alert('VOUS AVEZ GAGNER')
-            document.getElementById('gl').innerHTML=`Vous avez gagné en ${essais_start-essais} essaies.`
-            document.getElementById('resetbp').innerHTML='<br><INPUT TYPE="button" VALUE="Recommencer" ONCLICK="reset()"></INPUT>'
-        }
     } else if (essais > 0) {
         if (document.formulaire1.saisie1.value < prix[nb1-1]) {
             document.getElementById('info').innerHTML='C\'est plus !'
@@ -75,11 +74,6 @@ function tester2() {
         document.getElementById('info').innerHTML='Trouvé !'
         document.formulaire2.saisie2.disabled = true
         next()
-        if (towin == 4) {
-            alert('VOUS AVEZ GAGNER')
-            document.getElementById('gl').innerHTML=`Vous avez gagné en ${essais_start-essais}`
-            document.getElementById('resetbp').innerHTML='<br><INPUT TYPE="button" VALUE="Recommencer" ONCLICK="reset()"></INPUT>'
-        }
     } else if (essais > 0) {
         if (document.formulaire2.saisie2.value < prix[nb2-1]) {
             document.getElementById('info').innerHTML='C\'est plus !'
@@ -108,11 +102,6 @@ function tester3() {
         document.getElementById('info').innerHTML='Trouvé !'
         document.formulaire3.saisie3.disabled = true
         next()
-        if (towin == 4) {
-            alert('VOUS AVEZ GAGNER')
-            document.getElementById('gl').innerHTML=`Vous avez gagné en ${essais_start-essais}`
-            document.getElementById('resetbp').innerHTML='<br><INPUT TYPE="button" VALUE="Recommencer" ONCLICK="reset()"></INPUT>'
-        }
     } else if (essais > 0) {
         if (document.formulaire3.saisie3.value < prix[nb3-1]) {
             document.getElementById('info').innerHTML='C\'est plus !'
@@ -184,4 +173,5 @@ function reset() {
     document.getElementById('resetbp').innerHTML=''
     document.getElementById('gl').innerHTML='Commencer :'
     document.getElementById('essaies').innerHTML=`<input type='button' name='bp' value='START' onclick='start()'>` 
+    document.getElementById('info').innerHTML=''
 }
