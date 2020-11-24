@@ -20,6 +20,7 @@ let nb4 = randomNb(10,1)
 while (nb4 === nb1 || nb4 === nb2 || nb4 === nb3) {
     nb4 = randomNb(10,1)
 }
+console.log(`${prix[nb1-1]} / ${prix[nb2-1]} / ${prix[nb3-1]} / ${prix[nb4-1]}`)
 function next() {
     if (towin = 1) document.getElementById('reset').innerHTML=`<tbody><tr><td><img src=images/produit${nb2}.jpg></td><td>Between ${prixMinMax[nb2-1]}</td></tr><tr><td><form name='formulaire2'><input type='text' name='saisie2' size='10'><input type='button' name='bp2' value='CHECK' onclick='tester2()'></form></td><td></td></tr></tbody>`
     if (towin = 2) document.getElementById('reset').innerHTML=`<tbody><tr><td><img src=images/produit${nb3}.jpg></td><td>Between ${prixMinMax[nb3-1]}</td></tr><tr><td><form name='formulaire3'><input type='text' name='saisie3' size='10'><input type='button' name='bp3' value='CHECK' onclick='tester3()'></form></td><td></td></tr></tbody>`
