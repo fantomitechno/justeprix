@@ -105,7 +105,7 @@ function tester3() {
             document.formulaire3.saisie3.value = ''
         } else {
             document.getElementById('info').innerHTML='C\'est moins !'
-            document.formulaire3.saisie2.value = ''
+            document.formulaire3.saisie3.value = ''
         }
     } else {
         document.formulaire3.bp3.disabled = true
@@ -126,12 +126,9 @@ function tester4() {
         document.formulaire4.saisie4.value = 'Trouvé !'
         document.getElementById('info').innerHTML='Trouvé !'
         document.formulaire4.saisie4.disabled = true
-        next()
-        if (towin == 4) {
-            alert('VOUS AVEZ GAGNÉ')
-            document.getElementById('gl').innerHTML=`Vous avez gagné en ${essais_start-essais}`
-            document.getElementById('resetbp').innerHTML='<br><INPUT TYPE="button" VALUE="Recommencer" ONCLICK="reset()"></INPUT>'
-        }
+        alert('VOUS AVEZ GAGNÉ')
+        document.getElementById('gl').innerHTML=`Vous avez gagné en ${essais_start-essais}`
+        document.getElementById('resetbp').innerHTML='<br><INPUT TYPE="button" VALUE="Recommencer" ONCLICK="reset()"></INPUT>'
     } else if (essais > 0) {
         if (document.formulaire4.saisie4.value < prix[nb4-1]) {
             document.getElementById('info').innerHTML='C\'est plus !'
